@@ -1,0 +1,19 @@
+-- build.settings
+
+settings =
+{
+	orientation =
+	{
+		default = "portrait",
+		content = "portrait",
+		supported = { "landscapeLeft", "landscapeRight", "portrait", "portraitUpsideDown" }
+	},
+
+	iphone =
+	{
+		plist=
+		{
+			UIHiddenStatusBar="YES",
+		},
+	},
+}

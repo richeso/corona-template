@@ -1,0 +1,5 @@
+#CommentLine
+This is
+some sample text
+for Lua.
+#lastcommentline

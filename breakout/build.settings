@@ -1,0 +1,16 @@
+settings =
+{
+	iphone =
+	{
+		plist =
+		{
+			UIStatusBarHidden = true,
+			UIPrerenderedIcon = true,
+			
+			UIAppFonts = 
+			{
+				"Akashi.ttf"
+			}
+		},
+	},
+}

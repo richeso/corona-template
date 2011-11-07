@@ -1,0 +1,33 @@
+    -- let's make a "mask" group for our vector...
+                local dynamicMask = display.newGroup();
+
+    -- paint a screen sized background white and put it in the group.
+                local thisRect = display.newRect (0,0,screenWidth, screenHeight)
+                dynamicMask:insert(thisRect);
+
+    -- create the vector rectangle that i want for my mask and put it in the group
+                local thisRect = display.newRect (0,0,screenWidth-40, screenHeight-100)
+                dynamicMask:insert(thisRect);
+
+    -- paint the mask black - i want this area to SHOW THROUGH the mask.
+                thisRect:setFillColor(0,0,0);
+
+    -- position it.  i want a scroll view in the center of the screen -- so i need
+    -- to position this rectangle in the middle of the screen, leaving some extra
+    -- room up top for a title that doesn't scroll.
+                thisRect.x =centerX;
+                thisRect.y = centerY +20
+
+    -- you could add addition vector objects here to create a complex mask.
+
+    -- now the magic:
+                display.save (dynamicMask, "tmp.jpg",  system.TemporaryDirectory)
+
+    -- we don't need no stickin' badges -- get rid of the group.
+                dynamicMask:removeSelf();
+
+    -- but we do need our dynamically created, vector mask! ;-)
+                local mask = graphics.newMask( "tmp.jpg", system.TemporaryDirectory )
+
+    -- ta da!
+                objectToMask:setMask(mask)

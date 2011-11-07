@@ -1,0 +1,12 @@
+settings =
+{
+        orientation =
+        {
+                default = "portrait",
+        },
+
+        build =
+        {
+                custom = "a1234",
+        }
+}
